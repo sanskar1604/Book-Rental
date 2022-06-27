@@ -1,0 +1,69 @@
+<h1 class="mt-3 page_title"><mat-icon class="icons mr-3" color="primary">category</mat-icon>Category</h1>
+<mat-card class="mt-4">
+    <mat-card-content>
+        <mat-tab-group>
+            <mat-tab label="Category">
+              <div class="box mat-elevation-z4">
+                <table id="example" class="table table-border full-width">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Category Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let c of categories">
+                            <td>{{c.catId}}</td>
+                            <td>{{c.catTitle}}</td>
+                            <td>{{c.catDescription}}</td>
+                            <td>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Action</mat-label>
+                                    <mat-select>
+                                      <!-- <mat-option (click) = "updateLanguage(l.langId)">Edit {{l.language}}</mat-option> -->
+                                      <mat-option (click) = "deleteCategory(c.catId)">Drop {{c.catTitle}}</mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Category Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                </table>
+              </div>
+            </mat-tab>
+            <mat-tab label="Add Category">
+              <div class="box mat-elevation-z4">
+                <form (ngSubmit)="formSubmit()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Category</mat-label>
+                            <input [(ngModel)]="cat.catTitle" required matInput placeholder="Enter category here" type="text" name="catTitle"
+                             />
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Category Description</mat-label>
+                            <textarea  name="catDescription" matInput placeholder="Enter Category Description"
+                        [(ngModel)]="cat.catDescription"
+                        rows="10"
+                        ></textarea>
+                        </mat-form-field>
+
+                    <div class="container-fluid">
+                        <button type="submit" mat-raised-button color="primary">Add</button>
+                    </div>
+                </form>
+              </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+    </mat-card>
+    <!-- {{languages|json}} -->
+      

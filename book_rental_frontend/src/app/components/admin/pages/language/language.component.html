@@ -1,0 +1,60 @@
+<h1 class="mt-3 page_title"><mat-icon class="icons mr-3" color="primary">language</mat-icon>Language</h1>
+<mat-card class="mt-4">
+<mat-card-content>
+    <mat-tab-group>
+        <mat-tab label="Language">
+          <div class="box mat-elevation-z4">
+            <table id="example" class="table table-border full-width">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Language</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let l of languages">
+                        <td>{{l.langId}}</td>
+                        <td>{{l.language}}</td>
+                        <td>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Action</mat-label>
+                                <mat-select>
+                                  <!-- <mat-option (click) = "updateLanguage(l.langId)">Edit {{l.language}}</mat-option> -->
+                                  <mat-option (click) = "deleteLanguage(l.langId)">Drop {{l.language}}</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Language</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+            </table>
+          </div>
+        </mat-tab>
+        <mat-tab label="Add Language">
+          <div class="box mat-elevation-z4">
+            <form (ngSubmit) = "formSubmit()">
+                <div class="container-fluid">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Language</mat-label>
+                        <input [(ngModel)]="lang.language" required matInput placeholder="Enter language here" type="text" name="language"
+                         />
+                    </mat-form-field>
+                </div>
+                <div class="container-fluid">
+                    <button type="submit" mat-raised-button color="primary">Add</button>
+                </div>
+            </form>
+          </div>
+        </mat-tab>
+    </mat-tab-group>
+</mat-card-content>
+</mat-card>
+<!-- {{languages|json}} -->
+  
