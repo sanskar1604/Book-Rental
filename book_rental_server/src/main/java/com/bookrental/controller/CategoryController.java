@@ -55,34 +55,34 @@ public class CategoryController {
 	
 	//Get Specific Category
 	// /category/id
-//	@GetMapping("/category/{id}")
-//	public ResponseEntity<?> getCategory(@PathVariable("id") Long id) {
-//		try {
-//			return ResponseEntity.ok(this.categoryService.getCategory(id));
-//		}catch(BusinessException e) {
-//			ControllerException ce = new ControllerException(e.getErrorCode(), e.getErrorMessage());
-//			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
-//		}catch(Exception e) {
-//			ControllerException ce = new ControllerException("637", "Something went wrong in Controller layer " + e.getMessage());
-//			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
-//		}
-//		
-//	}
+	@GetMapping("/category/{id}")
+	public ResponseEntity<?> getCategory(@PathVariable("id") Long id) {
+		try {
+			return ResponseEntity.ok(this.categoryService.getCategory(id));
+		}catch(BusinessException e) {
+			ControllerException ce = new ControllerException(e.getErrorCode(), e.getErrorMessage());
+			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
+		}catch(Exception e) {
+			ControllerException ce = new ControllerException("637", "Something went wrong in Controller layer " + e.getMessage());
+			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
+		}
+		
+	}
 	
 	//Update Category using category id
-//	@PutMapping("/category/{id}")
-//	public ResponseEntity<?> updateCategory(@RequestBody Category category, @PathVariable("id") Long id) {
-//		try {
-//			return ResponseEntity.ok(this.categoryService.updateCategory(category, id));
-//		}catch(BusinessException e) {
-//			ControllerException ce = new ControllerException(e.getErrorCode(), e.getErrorMessage());
-//			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
-//		}catch(Exception e) {
-//			ControllerException ce = new ControllerException("638", "Something went wrong in Controller layer " + e.getMessage());
-//			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
-//		}
-//		
-//	}
+	@PutMapping("/category/{id}")
+	public ResponseEntity<?> updateCategory(@RequestBody Category category, @PathVariable("id") Long id) {
+		try {
+			return ResponseEntity.ok(this.categoryService.updateCategory(category, id));
+		}catch(BusinessException e) {
+			ControllerException ce = new ControllerException(e.getErrorCode(), e.getErrorMessage());
+			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
+		}catch(Exception e) {
+			ControllerException ce = new ControllerException("638", "Something went wrong in Controller layer " + e.getMessage());
+			return new ResponseEntity<ControllerException>(ce, HttpStatus.NOT_FOUND);
+		}
+		
+	}
 	
 	//Delete Category
 	@DeleteMapping("/category/{id}")

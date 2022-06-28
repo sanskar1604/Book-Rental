@@ -47,7 +47,7 @@ export class CategoryComponent implements OnInit {
         this.cat.catDescription = '';
         console.log(this.cat.catTitle);
         console.log(this.cat.catDescription);
-        Swal.fire("Success !!", 'Language added successfully', 'success');
+        Swal.fire("Success !!", 'Category added successfully', 'success');
       },(error) => {
         console.log(error);
         Swal.fire("Error !!", 'Server Error', 'error');

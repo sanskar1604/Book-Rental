@@ -1,0 +1,25 @@
+<h1 class="mt-3 page_title"><mat-icon class="icons mr-3" color="primary">category</mat-icon>Update - <b>{{category.catTitle}}</b></h1>
+<mat-card class="mt-4">
+    <mat-card-content>
+        <form (ngSubmit)="formSubmit()">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Category</mat-label>
+                <input [(ngModel)]="category.catTitle" required matInput placeholder="Enter category here" type="text" name="catTitle"
+                 />
+            </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Category Description</mat-label>
+                <textarea  name="catDescription" matInput placeholder="Enter Category Description"
+            [(ngModel)]="category.catDescription"
+            rows="10"
+            ></textarea>
+            </mat-form-field>
+
+        <div class="container-fluid">
+            <button type="submit" mat-raised-button color="primary">Update</button>
+        </div>
+    </form>
+    </mat-card-content>
+    </mat-card>
+    <!-- {{languages|json}} -->
+      

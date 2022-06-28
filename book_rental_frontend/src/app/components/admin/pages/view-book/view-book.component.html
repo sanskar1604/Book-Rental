@@ -1,0 +1,77 @@
+<h1 class="mt-3 page_title"><mat-icon class="icons mr-3" color="primary">book</mat-icon>View - <b>{{books.bookTitle}}</b></h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card class="mt-4">
+                <mat-card-content>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-8">
+            <mat-card class="mt-4">
+                <mat-card-content>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1.</th>
+                                <td>ID</td>
+                                <td><b>{{books.bookId}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.</th>
+                                <td>Title</td>
+                                <td><b>{{books.bookTitle}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3.</th>
+                                <td>Author</td>
+                                <td><b>{{books.bookAuthor}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4.</th>
+                                <td>Publisher</td>
+                                <td><b>{{books.bookPublisher}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5.</th>
+                                <td>Edition</td>
+                                <td><b>{{books.bookEdition}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6.</th>
+                                <td>Price</td>
+                                <td><b>Rs. {{books.bookPrice}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7.</th>
+                                <td>No. of Pages</td>
+                                <td><b>{{books.bookPages}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8.</th>
+                                <td>Binding</td>
+                                <td><b>{{books.bookBinding}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9.</th>
+                                <td>Description</td>
+                                <td><b>{{books.bookDesc}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10.</th>
+                                <td>Category</td>
+                                <td><b>{{books.category.catTitle}}</b></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">11.</th>
+                                <td>Language</td>
+                                <td><b>{{books.language.language}}</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<!-- {{books|json}} -->

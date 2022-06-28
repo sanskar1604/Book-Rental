@@ -2,3 +2,12 @@
     margin-right: 10px;
     font-size: 25px;
 }
+
+.panel-title{
+    font-size: 35px;
+}
+
+.panel-sub-title{
+    font-size: 15px;
+    color: blue;
+}

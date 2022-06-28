@@ -1,4 +1,19 @@
+
 <mat-card class="mt-2">
+    <mat-card class="mt-2">
+        <mat-card-content class="text-center">
+            <p class="panel-title">My App</p>
+            <span class="panel-sub-title mt-2">Admin</span>
+        </mat-card-content>
+    </mat-card>
+    <mat-action-list>
+        <button mat-list-item routerLink="/admin/book"><mat-icon class="icons" color="primary">home</mat-icon>Dashboard</button>
+    </mat-action-list>
+    <mat-divider></mat-divider>
+    <mat-action-list>
+        <button mat-list-item routerLink="/admin/book"><mat-icon class="icons" color="primary">people</mat-icon>Customer</button>
+    </mat-action-list>
+    <mat-divider></mat-divider>
     <mat-action-list>
         <button mat-list-item routerLink="/admin/language"><mat-icon class="icons" color="primary">language</mat-icon>Language</button>
     </mat-action-list>
@@ -8,6 +23,14 @@
     </mat-action-list>
     <mat-divider></mat-divider>
     <mat-action-list>
-        <button mat-list-item routerLink="/admin/category"><mat-icon class="icons" color="primary">book</mat-icon>Book</button>
+        <button mat-list-item routerLink="/admin/book"><mat-icon class="icons" color="primary">book</mat-icon>Book</button>
+    </mat-action-list>
+    <mat-divider></mat-divider>
+    <mat-action-list>
+        <button mat-list-item routerLink="/admin/book"><mat-icon class="icons" color="primary">shopping_cart</mat-icon>Order</button>
+    </mat-action-list>
+    <mat-divider></mat-divider>
+    <mat-action-list>
+        <button mat-list-item routerLink="/admin/book"><mat-icon class="icons" color="primary">logout</mat-icon>Logout</button>
     </mat-action-list>
 </mat-card>

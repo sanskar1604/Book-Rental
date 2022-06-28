@@ -53,44 +53,44 @@ public class CategoryServiceImpl implements CategoryService {
 
 
 	//Get Specific Category
-//	@Override
-//	public Category getCategory(Long id) {
-//		// TODO Auto-generated method stub
-//		try {
-//			return this.categoryRepo.findById(id).get();
-//		}catch(IllegalArgumentException e) {
-//			throw new BusinessException("626", "Given category id is null");
-//		}catch(java.util.NoSuchElementException e) {
-//			throw new BusinessException("627", "Given category id does not exist in database");
-//		}catch(Exception e) {
-//			throw new BusinessException("628", "Something went wrong in service layer " + e.getMessage());
-//		}
-//		
-//	}
+	@Override
+	public Category getCategory(Long id) {
+		// TODO Auto-generated method stub
+		try {
+			return this.categoryRepo.findById(id).get();
+		}catch(IllegalArgumentException e) {
+			throw new BusinessException("626", "Given category id is null");
+		}catch(java.util.NoSuchElementException e) {
+			throw new BusinessException("627", "Given category id does not exist in database");
+		}catch(Exception e) {
+			throw new BusinessException("628", "Something went wrong in service layer " + e.getMessage());
+		}
+		
+	}
 
 
 	//Update Category
-//	@Override
-//	public Category updateCategory(Category category, Long id) {
-//		if(category.getcatTitle().isEmpty() || category.getcatTitle().length() == 0) {
-//			throw new BusinessException("629", "Please enter proper category, It is blank");
-//		}else if(category.getcatDescription().isEmpty() || category.getcatDescription().length() == 0) {
-//			throw new BusinessException("630", "Please enter proper category description, It is blank");
-//		}
-//		try {
-//			Category cat = this.categoryRepo.findById(id).get();
-//			cat.setcatTitle(category.getcatTitle());
-//			cat.setcatDescription(category.getcatDescription());
-//			return this.categoryRepo.save(cat);
-//		}catch(IllegalArgumentException e) {
-//			throw new BusinessException("631", "Given category is null");
-//		}catch(java.util.NoSuchElementException e) {
-//			throw new BusinessException("633", "Given category id does not exist in database");
-//		}catch(Exception e) {
-//			throw new BusinessException("632", "Something went wrong in service layer " + e.getMessage());
-//		}
-//		
-//	}
+	@Override
+	public Category updateCategory(Category category, Long id) {
+		if(category.getcatTitle().isEmpty() || category.getcatTitle().length() == 0) {
+			throw new BusinessException("629", "Please enter proper category, It is blank");
+		}else if(category.getcatDescription().isEmpty() || category.getcatDescription().length() == 0) {
+			throw new BusinessException("630", "Please enter proper category description, It is blank");
+		}
+		try {
+			Category cat = this.categoryRepo.findById(id).get();
+			cat.setcatTitle(category.getcatTitle());
+			cat.setcatDescription(category.getcatDescription());
+			return this.categoryRepo.save(cat);
+		}catch(IllegalArgumentException e) {
+			throw new BusinessException("631", "Given category is null");
+		}catch(java.util.NoSuchElementException e) {
+			throw new BusinessException("633", "Given category id does not exist in database");
+		}catch(Exception e) {
+			throw new BusinessException("632", "Something went wrong in service layer " + e.getMessage());
+		}
+		
+	}
 
 
 	@Override

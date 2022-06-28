@@ -21,6 +21,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule} from '@angular/material/select';
 import { CategoryComponent } from './components/admin/pages/category/category.component';
+import { BookComponent } from './components/admin/pages/book/book.component';
+import { ViewBookComponent } from './components/admin/pages/view-book/view-book.component';
+import { UpdateBookComponent } from './components/admin/pages/update-book/update-book.component';
+import { UpdateCategoryComponent } from './components/admin/pages/update-category/update-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,11 @@ import { CategoryComponent } from './components/admin/pages/category/category.co
     SidebarComponent,
     DashboardComponent,
     LanguageComponent,
-    CategoryComponent
+    CategoryComponent,
+    BookComponent,
+    ViewBookComponent,
+    UpdateBookComponent,
+    UpdateCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +53,7 @@ import { CategoryComponent } from './components/admin/pages/category/category.co
     HttpClientModule,
     MatSnackBarModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

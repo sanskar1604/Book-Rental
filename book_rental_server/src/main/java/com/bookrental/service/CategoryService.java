@@ -11,9 +11,9 @@ public interface CategoryService {
 	//Get All Category
 	public List<Category> getAllCategory();
 	//Get Specific Category
-//	public Category getCategory(Long id);
+	public Category getCategory(Long id);
 	//Update Category
-//	public Category updateCategory(Category category, Long id);
+	public Category updateCategory(Category category, Long id);
 	//Delete Specific Category
 	public void deleteCategory(Long id);
 }

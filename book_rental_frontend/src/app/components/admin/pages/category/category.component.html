@@ -22,8 +22,8 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Action</mat-label>
                                     <mat-select>
-                                      <!-- <mat-option (click) = "updateLanguage(l.langId)">Edit {{l.language}}</mat-option> -->
-                                      <mat-option (click) = "deleteCategory(c.catId)">Drop {{c.catTitle}}</mat-option>
+                                        <mat-option [routerLink]="'/admin/update-category//'+c.catId">Update {{c.catTitle}}</mat-option>
+                                        <mat-option (click) = "deleteCategory(c.catId)">Drop {{c.catTitle}}</mat-option>
                                     </mat-select>
                                   </mat-form-field>
                             </td>
